@@ -19,3 +19,7 @@ And copy the contents of this config file
   
 ***Remaning a Window:***
 <Ctrl - a> + , 
+
+
+**Reference:**
+Youtube: **>_LearnLinux.tv** : (https://www.youtube.com/watch?v=bjBjZvZsgks&list=PLT98CRl2KxKGiyV1u6wHDV8VwcQdzfuKe&index=5)
