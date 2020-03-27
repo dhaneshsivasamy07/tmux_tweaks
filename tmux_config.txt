@@ -1,0 +1,33 @@
+tmux configration:
+
+# Send prefix
+# changes the prefix from ctrl-b to ctrl-a
+set-option -g prefix C-a
+unbind-key C-a
+bind-key C-a send-prefix
+
+
+# Use Alt-arrow keys to switch panes
+# Use Alt and arrow keys to switch between the created panes
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
+
+# Shift arrow to switch windows
+# Use Shift and arrow Kwys to switch between windows
+bind -n S-Left previous-window
+bind -n S-Right next-window
+
+# Mouse mode
+# Mouse is enabled globally which can be used to navigate inside the split panes and used to scroll through buffer
+setw -g mouse on
+
+# Set easier window split keys
+# ctrl-a and h for horizontal split and v for vertical split
+bind-key v split-window -h
+bind-key h split-window -v
+
+# Easy config reload
+
+bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded."
