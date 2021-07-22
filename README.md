@@ -4,12 +4,7 @@ Huge Thanks to TryHackMe's Remux the TMUX [room](https://tryhackme.com/room/tmux
 ## Setup
 
 ```bash
-cd ~/
-git clone https://github.com/cyberwr3nch/tmux_tweaks
-cd /opt/
-git clone https://github.com/tmux-plugins/tmux-yank
-cp ~/tmux_tweaks/tmux.conf ~/.tmux.conf
-echo "Done :)"
+https://github.com/dhaneshsivasamy07/tmux_tweaks/blob/master/install.sh | bash 
 ```
 
 ## Reference
@@ -136,6 +131,3 @@ Clone tmux-yank plugin from [here](https://github.com/tmux-plugins/tmux-yank)
 
 > change dn@sasusaku in line 45 to your linking
 
-
-#### Reference:
-Youtube: **>_LearnLinux.tv** : (https://www.youtube.com/watch?v=bjBjZvZsgks&list=PLT98CRl2KxKGiyV1u6wHDV8VwcQdzfuKe&index=5)

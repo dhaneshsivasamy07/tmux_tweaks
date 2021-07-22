@@ -1,0 +1,2 @@
+#!/bin/bash
+if [[ $(ip addr | grep eth0) == '' ]]; then echo "eth0 down"; else ip addr show dev eth0 | grep "inet\b" | awk '{print "eth0: " $2}' | cut -d/ -f1; fi

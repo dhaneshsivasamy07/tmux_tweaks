@@ -1,0 +1,4 @@
+#!/bin/bash
+# tun0
+if [[ $(ip addr | grep tun0) == '' ]]; then echo "Status Down"; else ip addr show dev tun0 | grep "inet\b" | awk '{print "tun0: " $2}'| cut -d/ -f1; fi
+
