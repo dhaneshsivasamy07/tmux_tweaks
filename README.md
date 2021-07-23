@@ -4,7 +4,7 @@ Huge Thanks to TryHackMe's Remux the TMUX [room](https://tryhackme.com/room/tmux
 ## Setup
 
 ```bash
-curl https://raw.githubusercontent.com/dhaneshsivasamy07/tmux_tweaks/master/install.sh | bash 
+https://github.com/dhaneshsivasamy07/tmux_tweaks/blob/master/install.sh | bash 
 ```
 
 ## Reference
