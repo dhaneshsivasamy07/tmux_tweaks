@@ -7,7 +7,36 @@ Huge Thanks to TryHackMe's Remux the TMUX [room](https://tryhackme.com/room/tmux
 curl -s https://raw.githubusercontent.com/dhaneshsivasamy07/tmux_tweaks/master/install.sh | bash 
 ```
 
+## Note
+If you want to edit the color coding used in this tmux config, use the following image to change the color codes
+![clrcodes](https://github.com/dhaneshsivasamy07/tmux_tweaks/blob/master/files/tmux_colors.png)
+
 ## Reference
+
+```bash
+# Most used
+# start a new session
+tmux
+
+# create a new window
+{prefixkeys} + c
+
+# set the home directory of a tmux to current working directory
+{prefixkeys} + q
+
+# close a window with its panes
+{prefixkeys} + w
+
+# kill a tmux session
+{prefixkeys} + k
+
+# perform a horizontal split
+{prefixkeys} + h
+
+# perform a vertical split
+{prefixkeys} + v
+````
+
 - prefixkeys = "ctrl+a"
 
 ```bash
@@ -36,6 +65,9 @@ tmux kill-session -t {session-name}
 # create a new window
 {prefixkeys} + c
 
+# set the home directory of a tmux to current working directory
+{prefixkeys} + q
+
 # rename a new windows
 {prefixkeys} + ,
 
@@ -48,21 +80,22 @@ tmux kill-session -t {session-name}
 # move to previous window
 {prefixkeys} + p
 
-# move between windows in between sessions
+# close a window
 {prefixkeys} + w
 
 # join pane form  a session
 {prefixkeys} + : join-pane -s {pane-name}
+{prefixkeys} + j
 
 # set a custom directory to openup for newly opening panes
 : attach -c 'path to the dir'
 : a -c 'path to the dir'
 
 # perform a horizontal split
-{prefixkeys} + \"
+{prefixkeys} + h
 
 # perform a vertical split
-{prefixkeys} + %
+{prefixkeys} + v
 
 # navigte between splitted panes
 {prefixkeys} + {arrowkeys}
@@ -88,6 +121,7 @@ tmux kill-session -t {session-name}
 
 # swap panes manually
 : swap-pane -t <target pane> -s <switch with>
+{prefixkeys} + s
 
 # start copy mode
 {prefixkeys} + [
@@ -122,6 +156,8 @@ alt + w  - saves the highlighted buffer to the clipboard
 {prefixkeys} + y
 - Copied to the clipboard
 ```
+
+
 
 
 ### Note:
