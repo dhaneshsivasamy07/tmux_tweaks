@@ -1,5 +1,15 @@
 #!/bin/bash
 
+###########################################################
+## Creates a new session with the machine name
+## Automatically adds the IP and the machine name to the /etc/hosts file
+## WARNING: DONT USE MACHINE NAME AS TLD (domain.tld) --> give as domain
+## Automatically checks for html/php in port 80
+## Creates nmap and files directory
+## Creates a template file in the name of the domain
+## You can use $ip anywhere in the session which will be automatically substitued
+###########################################################
+
 ## INFO: Incase of debugging is needed
 ## Open vim --> :3,$s/^#//g
 
@@ -9,6 +19,17 @@
 
 machine=$1
 ip=$2
+
+
+# Hosts file alter
+sudo tee /etc/hosts <<EOF
+###############################################################
+$(cat /etc/hosts.bak)
+#####################  OSCP VULNHUB HTB #######################
+$ip $machine
+EOF
+
+
 
 # Function
 dnoscp(){
@@ -60,7 +81,7 @@ if [[ -f '/etc/hosts.bak' ]]; then
 #    echo "/etc/hosts file found"
     if [[ $# -ne 2 ]]; then
         echo "[-] Insufficient Argument"
-        echo "Eg: $0 machine.local machine0.machine0.machine0.machine0"
+        echo "Eg: $0 machine.local 10.10.10.10"
         exit
     else
         echo '[*] Sufficient Arguemnts'
@@ -72,7 +93,4 @@ else
     sudo cp /etc/hosts /etc/hosts.bak
 fi
 
-# calling function
-# dnoscp
 
-# TODO: Host File Alter
