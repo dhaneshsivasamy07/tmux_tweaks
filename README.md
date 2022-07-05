@@ -165,5 +165,4 @@ The conf file is not available by default in the user directory. So you gotta cr
 And copy the contents of this config file
 Clone tmux-yank plugin from [here](https://github.com/tmux-plugins/tmux-yank)
 
-> change dn@sasusaku in line 45 to your linking
 
