@@ -13,6 +13,9 @@
 ## INFO: Incase of debugging is needed
 ## Open vim --> :3,$s/^#//g
 
+## INFO: Insert comment in each line
+## Open vim --> :,30s/^/#/ = inserts # at the start of each line
+
 ## Arguments
 ## DEBUG: passed arguemnts
 #echo Provided Arguement: $#;
@@ -20,18 +23,13 @@
 machine=$1
 ip=$2
 
-
-# Hosts file alter
-sudo tee /etc/hosts <<EOF
-###############################################################
-$(cat /etc/hosts.bak)
-#####################  OSCP VULNHUB HTB #######################
-$ip $machine
-EOF
-
-
-
 # Function
+host(){
+    echo '[!] Adding to the hosts'
+    echo $ip $machine | sudo tee -a /etc/hosts
+}
+
+
 dnoscp(){
     echo '[*] Setup Function'
 #    echo $machine
@@ -85,6 +83,7 @@ if [[ -f '/etc/hosts.bak' ]]; then
         exit
     else
         echo '[*] Sufficient Arguemnts'
+        host
         dnoscp
     fi
 else
