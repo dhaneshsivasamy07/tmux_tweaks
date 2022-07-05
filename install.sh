@@ -9,4 +9,6 @@ cp ~/tmux_tweaks/tmux.conf ~/.tmux.conf
 mkdir ~/.tmux
 cp -r ~/tmux_tweaks/files/* ~/.tmux
 cp ~/tmux_tweaks/opt_README.md /opt/README.md
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo "Done :)"
+
