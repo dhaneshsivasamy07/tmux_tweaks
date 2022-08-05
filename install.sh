@@ -14,3 +14,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 rm -rf ~/tmux_tweaks
 echo "Done :)"
 
+echo "***************************************************************"
+echo "Please install the tmux plugins with ctrl+A shift+i"
+echo "***************************************************************"
